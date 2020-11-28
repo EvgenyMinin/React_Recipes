@@ -1,11 +1,17 @@
 import { Component } from "react";
 import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "../../utils/globalStyle";
 
 import { theme } from "../../utils/theme";
+import MainHead from "./MainHead";
+import { IMainLayout } from "./types";
 
-export class MainLayout extends Component {
-  render() {
-    const { children } = this.props;
-    return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
-  }
-}
+const MainLayout = ({ title, children }: IMainLayout) => (
+  <ThemeProvider theme={theme}>
+    <MainHead title={title} />
+    <GlobalStyle />
+    {children}
+  </ThemeProvider>
+);
+
+export default MainLayout;
