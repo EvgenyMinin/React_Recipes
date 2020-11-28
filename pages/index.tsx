@@ -1,17 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
+import { MainLayout } from "../components/layout/MainLayout";
+
 const StyledHeader = styled.h1`
-  font-size: 2em;
-  text-align: left;
-  padding: 16px;
+  ${({ theme }) => `
+    font-size: ${theme.font_size_xl};
+    padding: ${theme.padding_small};
+  `}
 `;
 
 const Index = () => {
   return (
-    <div>
+    <MainLayout>
       <StyledHeader>Index Page</StyledHeader>
-    </div>
+    </MainLayout>
   );
 };
 
