@@ -28,6 +28,7 @@ export const theme = {
   margin_small,
   heart_color,
   border_color,
+  header_color,
   header_border_color,
   border_width,
 };
