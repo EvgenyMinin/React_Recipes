@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "generate": "gql-gen --config codegen.yml --require dotenv/config"
   },
   "repository": {
     "type": "git",
@@ -23,12 +24,16 @@
     "@apollo/client": "^3.2.9",
     "@apollo/react-hooks": "^4.0.0",
     "@apollo/react-ssr": "^4.0.0",
+    "@graphql-codegen/cli": "^1.19.4",
+    "@graphql-codegen/typescript": "^1.19.0",
+    "@graphql-codegen/typescript-operations": "^1.17.12",
     "antd": "^4.8.6",
     "apollo-cache-inmemory": "^1.6.6",
     "apollo-client": "^2.6.10",
     "apollo-link-http": "^1.5.17",
     "dotenv": "^8.2.0",
     "graphql": "^15.4.0",
+    "graphql-tag": "^2.11.0",
     "isomorphic-unfetch": "^3.1.0",
     "next": "^10.0.3",
     "react": "^17.0.1",
