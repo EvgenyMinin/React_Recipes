@@ -1,6 +1,8 @@
 import "antd/dist/antd.css";
 import App from "next/app";
 
+import { withApollo } from "../components/WithApollo";
+
 class ReactRecepies extends App {
   render() {
     const { Component, pageProps } = this.props;
@@ -8,4 +10,4 @@ class ReactRecepies extends App {
   }
 }
 
-export default ReactRecepies;
+export default withApollo({ ssr: true })(ReactRecepies);
