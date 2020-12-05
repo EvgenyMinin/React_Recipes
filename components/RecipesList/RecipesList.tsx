@@ -11,8 +11,9 @@ import { Recipe } from "../../generated/apollo-components";
 import Loading from "../notify/Loading";
 import Warning from "../notify/Warning";
 import Error from "../notify/Error";
+import RecipeItem from "../RecipeItem";
 
-const RecipesList = ({ options, queryType }: Props) => {
+const RecipesList = ({ options, parentRoute, queryType }: Props) => {
   const query =
     queryType === queryEnum.recipes ? recipesGraphQL : userLikesGraphQL;
   const { loading, data, error } = useQuery(query, options);
@@ -35,7 +36,11 @@ const RecipesList = ({ options, queryType }: Props) => {
   return (
     <Row>
       {recipesList.map((recipe: Recipe) => (
-        <p key={recipe.id}>{recipe.title}</p>
+        <RecipeItem
+          key={`${recipe.id}-${queryType}`}
+          recipe={recipe}
+          parentRoute={parentRoute}
+        />
       ))}
     </Row>
   );
