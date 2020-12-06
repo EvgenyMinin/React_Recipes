@@ -9,9 +9,7 @@ import Error from "../../components/notify/Error";
 import Loading from "../../components/notify/Loading";
 import OneRecipe from "../../components/OneRecipe";
 
-import { IProps } from "./types";
-
-const Recipe = ({ id }: IProps) => {
+const Recipe = ({ id }: { id: string }) => {
   const { loading, data, error } = useQuery(recipeGraphQL, {
     variables: { where: { id } },
   });
