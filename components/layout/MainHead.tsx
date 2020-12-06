@@ -47,7 +47,7 @@ const MainHead = ({ title }: ITitle) => {
 
       <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
-      <link rel="manifest" href="/favicon/site/webmanifest" />
+      <link rel="manifest" href="/favicon/site.webmanifest" />
     </Head>
   );
 };
