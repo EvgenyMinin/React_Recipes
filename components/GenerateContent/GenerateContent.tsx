@@ -1,7 +1,7 @@
 import React from "react";
 import { ITextString } from "./types";
 
-const GenerateContent = ({ textString }) => {
+const GenerateContent = ({ textString }: ITextString) => {
   return (
     <p>
       {textString.split("\n").map((item, key) => (

@@ -2,13 +2,14 @@ import { useQuery } from "@apollo/client";
 import React from "react";
 import get from "lodash/get";
 
+import { recipeGraphQL } from "../../graphql/queries/recipe";
+
 import MainLayout from "../../components/layout/MainLayout";
 import Error from "../../components/notify/Error";
 import Loading from "../../components/notify/Loading";
-
-import { recipeGraphQL } from "../../graphql/queries/recipe";
-import { IProps } from "./types";
 import OneRecipe from "../../components/OneRecipe";
+
+import { IProps } from "./types";
 
 const Recipe = ({ id }: IProps) => {
   const { loading, data, error } = useQuery(recipeGraphQL, {

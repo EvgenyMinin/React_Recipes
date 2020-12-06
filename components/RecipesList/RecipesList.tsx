@@ -7,12 +7,14 @@ import map from "lodash/map";
 import { recipesGraphQL } from "../../graphql/queries/recipes";
 import { userLikesGraphQL } from "../../graphql/queries/userLikes";
 
-import { Props, queryEnum } from "./types";
 import { Recipe } from "../../generated/apollo-components";
+
 import Loading from "../notify/Loading";
 import Warning from "../notify/Warning";
 import Error from "../notify/Error";
 import RecipeItem from "../RecipeItem";
+
+import { Props, queryEnum } from "./types";
 
 const RecipesList = ({ options, parentRoute, queryType }: Props) => {
   const query =

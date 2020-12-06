@@ -2,11 +2,12 @@ import { Col, List, Row } from "antd";
 import React from "react";
 import GraphImage from "graphcms-image";
 
+import { generateUnit } from "../../utils/generateUtils";
+import GenerateContent from "../GenerateContent";
+
 import { IRecipe } from "./types";
 
 import { StyledOneRecipe } from "./styles";
-import { generateUnit } from "../../utils/generateUtils";
-import GenerateContent from "../GenerateContent";
 
 const OneRecipe = ({ recipe }: IRecipe) => {
   const { image, title, description, ingredients, content } = recipe;
