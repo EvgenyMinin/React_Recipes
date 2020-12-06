@@ -8,6 +8,7 @@ import Loading from "../../components/notify/Loading";
 
 import { recipeGraphQL } from "../../graphql/queries/recipe";
 import { IProps } from "./types";
+import OneRecipe from "../../components/OneRecipe";
 
 const Recipe = ({ id }: IProps) => {
   const { loading, data, error } = useQuery(recipeGraphQL, {
@@ -42,7 +43,7 @@ const Recipe = ({ id }: IProps) => {
 
   return (
     <MainLayout title={title}>
-      <div>Recipe {id}</div>
+      <OneRecipe recipe={data.recipe} />
     </MainLayout>
   );
 };

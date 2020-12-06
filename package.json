@@ -38,6 +38,7 @@
     "isomorphic-unfetch": "^3.1.0",
     "lodash": "^4.17.20",
     "next": "^10.0.3",
+    "pluralize": "^8.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-ellipsis-text": "^1.2.1",
@@ -46,6 +47,7 @@
   "devDependencies": {
     "@types/lodash": "^4.14.165",
     "@types/node": "^14.14.10",
+    "@types/pluralize": "^0.0.29",
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.4",
     "babel-plugin-styled-components": "^1.12.0",
