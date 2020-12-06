@@ -1,7 +1,8 @@
 import { useQuery } from "@apollo/client";
 import React from "react";
 import { Row } from "antd";
-import * as _ from "lodash";
+import get from "lodash/get";
+import map from "lodash/map";
 
 import { recipesGraphQL } from "../../graphql/queries/recipes";
 import { userLikesGraphQL } from "../../graphql/queries/userLikes";
@@ -18,9 +19,9 @@ const RecipesList = ({ options, parentRoute, queryType }: Props) => {
     queryType === queryEnum.recipes ? recipesGraphQL : userLikesGraphQL;
   const { loading, data, error } = useQuery(query, options);
 
-  const parentArray = _.get(data, queryType);
-  const recipesList = _.map(parentArray, (value: Recipe) =>
-    _.get(value, "recipe", value)
+  const parentArray = get(data, queryType);
+  const recipesList = map(parentArray, (value: Recipe) =>
+    get(value, "recipe", value)
   );
 
   if (loading) return <Loading />;

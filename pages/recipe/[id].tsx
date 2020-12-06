@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import React from "react";
-import * as _ from "lodash";
+import get from "lodash/get";
 
 import MainLayout from "../../components/layout/MainLayout";
 import Error from "../../components/notify/Error";
@@ -14,7 +14,7 @@ const Recipe = ({ id }: IProps) => {
     variables: { where: { id } },
   });
 
-  const title = _.get(data, "recipe.title");
+  const title = get(data, "recipe.title");
 
   if (loading) {
     return (

@@ -14,6 +14,9 @@ const StyledHeader = styled(Layout.Header)`
       width: 80%;
     }
   `}
+  img {
+    cursor: pointer;
+  }
 `;
 
 const StyledMenu = styled(Menu)``;
@@ -21,7 +24,9 @@ const StyledMenu = styled(Menu)``;
 const MainHeader = () => {
   return (
     <StyledHeader className="header">
-      <img src="/logo.svg" alt="Recipes App Logo" />
+      <Link href="/">
+        <img src="/logo.svg" alt="Recipes App Logo" />
+      </Link>
       <Menu theme="light" mode="horizontal" defaultSelectedKeys={["/"]}>
         <Menu.Item key="/">
           <Link href="/">Home</Link>
