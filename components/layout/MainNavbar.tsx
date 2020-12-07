@@ -23,8 +23,7 @@ const StyledHeader = styled(Layout.Header)`
 
 const MainNavbar = () => {
   const { user, loading } = useFetchUser();
-  console.log("user", user);
-  console.log("loading", loading);
+
   return (
     <StyledHeader className="header">
       <Link href="/">
@@ -35,12 +34,12 @@ const MainNavbar = () => {
           <Link href="/">Home</Link>
         </Menu.Item>
         {user && !loading ? (
-          <Menu.Item key="api/logout">
-            <Link href="api/logout">Logout</Link>
+          <Menu.Item key="/api/logout">
+            <Link href="/api/logout">Logout</Link>
           </Menu.Item>
         ) : (
-          <Menu.Item key="api/login">
-            <Link href="api/login">Login</Link>
+          <Menu.Item key="/api/login">
+            <Link href="/api/login">Login</Link>
           </Menu.Item>
         )}
       </Menu>
