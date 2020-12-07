@@ -1,7 +1,7 @@
 import { Layout } from "antd";
 import { ThemeProvider } from "styled-components";
 
-import MainHeader from "./MainHeader";
+import MainNavbar from "./MainNavbar";
 import MainFooter from "./MainFooter";
 import MainHead from "./MainHead";
 
@@ -16,7 +16,7 @@ const MainLayout = ({ title, children }: IMainLayout) => (
     <MainHead title={title} />
     <GlobalStyle />
     <StyledLayout>
-      <MainHeader />
+      <MainNavbar />
       <Layout.Content>{children}</Layout.Content>
       <MainFooter />
     </StyledLayout>
