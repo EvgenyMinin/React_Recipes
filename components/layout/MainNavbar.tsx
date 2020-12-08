@@ -4,6 +4,7 @@ import Link from "next/link";
 import styled from "styled-components";
 
 import { useFetchUser } from "../../utils/user";
+import { TitleContainer } from "./styles";
 
 const StyledHeader = styled(Layout.Header)`
   ${({ theme }) => `
@@ -26,9 +27,15 @@ const MainNavbar = () => {
 
   return (
     <StyledHeader className="header">
-      <Link href="/">
-        <img src="/logo.svg" alt="Recipes App Logo" />
-      </Link>
+      <TitleContainer>
+        <Link href="/">
+          <img src="/logo.svg" alt="Recipes App Logo" />
+        </Link>
+        <div>
+          <h2>Recipes</h2>
+          <p>A recipe discovery app powered by Next.js</p>
+        </div>
+      </TitleContainer>
       <Menu theme="light" mode="horizontal" defaultSelectedKeys={["/"]}>
         <Menu.Item key="/">
           <Link href="/">Home</Link>
