@@ -1,15 +1,10 @@
 import React from "react";
-import styled from "styled-components";
 
 import MainLayout from "../components/layout/MainLayout";
 import RecipesList from "../components/RecipesList";
 import { queryEnum } from "../components/RecipesList/types";
 
-const StyledHeader = styled.h1`
-  ${({ theme }) => `
-    padding: ${theme.padding_small};
-  `}
-`;
+import { StyledHeader } from "../styles";
 
 const Index = () => {
   return (
